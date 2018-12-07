@@ -35,11 +35,14 @@ Prom UI
 
 ## Your first query
 
-> Exercise:
->
-> Query `up` in the Prometheus user interface. Swap between the console and the graph tabs. Extend the interval to 24h in the graph tab.
-
 `up` is a special metric added by Prometheus which represents if a /metrics page for a target can be scraped. It is a `gauge` metric meaning it's value can go up and down. 1 represents a good scrape of a target, 0 a failed scrape of a target.
+
+#### Exercise
+
+Query `up` in the Prometheus user interface. Swap between the console and the graph tabs. Extend the interval to 24h in the graph tab.
+
+
+## Filtering with labels
 
 The query `up` returns many timeseries. You can see how many in the top right. You can filter using labels. You can use more than one label.
 
@@ -51,15 +54,19 @@ You can use regex for example to get all timeseries for the metric `up` whose jo
 
 You can also use `!=`.
 
-> Exercise
->
-> Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
->
-> `cpu{app="notify-api", space="production", exported_instance="0"}`
->
-> Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
->
-> `memory_utilization{app=~"registers.*", space!="sandbox"}`
+#### Exercise
+
+Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
+
+<details><summary>ANSWER</summary>
+`cpu{app="notify-api", space="production", exported_instance="0"}`
+</details>
+
+Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
+
+<details><summary>ANSWER</summary>
+`memory_utilization{app=~"registers.*", space!="sandbox"}`
+</details>
 
 
 ## Instance and range vectors
@@ -67,21 +74,19 @@ You can also use `!=`.
 * Instant vector - a set of time series containing a single sample for each time series, all sharing the same timestamp
 * Range vector - a set of time series containing a range of data points over time for each time series
 
+You can chose the range of data you want to look back on using `s`,`m`,`h`,`d`,`w`,`y`.
+
 It's important to understand the difference between instant and range vectors PromQL functions can require you to provide the correct type as input.
 
-> Exercise:
->
-> Make sure you on the `Console` tab.
->
-> Query `up{job="prometheus"}`. This is an instant vector
->
-> Query `up{job="prometheus"}[2m]`. This is a range vector. Compare the difference. Can you work out how often this target is scraped? What happens if you try and graph this query?
->
-> A: 30s
->
-> You can chose the range of data you want to look back on using `s`,`m`,`h`,`d`,`w`,`y`.
->
-> Query `up{job="prometheus"}` for a 1 hour range.
+#### Exercise
+
+Make sure you on the `Console` tab.
+
+Query `up{job="prometheus"}`. This is an instant vector
+
+Query `up{job="prometheus"}[2m]`. This is a range vector. Compare the difference. Can you work out how often this target is scraped? What happens if you try and graph this query?
+
+Query `up{job="prometheus"}` for a 1 hour range.
 
 
 ## Counters
