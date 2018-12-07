@@ -22,6 +22,7 @@ Write a query to return the current value for the `cpu` for the first instance o
 </p>
 </details>
 
+------
 
 Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
 
