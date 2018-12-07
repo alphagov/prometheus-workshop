@@ -8,7 +8,7 @@ rate(http_requests_total{job="api-server"}[5m])
 
 `avg_over_time(v range-vector)`: the average value of all points in the specified interval (also known as moving average)
 
-#### Exercise
+## Exercise
 
 1. In the previous exercise you worked out the the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space. Now return that list sorted by value.
 

@@ -10,7 +10,7 @@ You can use regex for example to get all timeseries for the metric `up` whose jo
 
 You can also use `!=`.
 
-#### Exercise
+## Exercise
 
 1. Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
 

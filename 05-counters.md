@@ -8,7 +8,7 @@ Often you want to know how many 2xx requests you've had in the last minute or ho
 
 ```increase(requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}[1m])```
 
-#### Exercise
+## Exercise
 
 1. Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Increase the time period of your graph to spot the counter resets.
 

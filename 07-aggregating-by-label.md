@@ -8,7 +8,7 @@ You can sum on any label and even multiple labels.
 
 `sum(disk_bytes) by (org, space)`
 
-#### Exercise
+## Exercise
 
 1. What is the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space?
 

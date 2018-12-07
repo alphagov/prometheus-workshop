@@ -5,7 +5,7 @@
 
 It's important to understand the difference between instant and range vectors PromQL functions can require you to provide the correct type as input.
 
-#### Exercise
+## Exercise
 
 Make sure you on the `Console` tab.
 

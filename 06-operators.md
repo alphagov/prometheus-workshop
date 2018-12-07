@@ -4,7 +4,7 @@
 
 Binary operators exist in prometheus such as `+`, `-`, `*`, `/`, `^`, `%`, for example `up * 3`.
 
-#### Exercise
+## Exercise
 
 
 ## Aggregation operators can be used to aggregate the elements of a single instant vector.
@@ -15,7 +15,7 @@ Common aggregators include `sum`, `min`, `max`, `avg`, `topk`, `bottomk`, `quant
 
 For example to find the total number of PaaS disk space currently in use for all applications we are monitoring you can use `sum(disk_bytes)`.
 
-#### Exercise
+## Exercise
 
 1. Find what the maximum value for the `cpu` metric is.
 
