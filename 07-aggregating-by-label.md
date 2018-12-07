@@ -2,7 +2,7 @@
 
 `sum(disk_bytes)` gives you total disk_bytes in use
 
-`sum(disk_bytes) by (org)` gives you the total disk_bytes in use broken down by team
+`sum(disk_bytes) by (org)` gives you the total disk_bytes in use grouped by by team
 
 You can sum on any label and even multiple labels.
 
@@ -10,12 +10,20 @@ You can sum on any label and even multiple labels.
 
 ## Exercise
 
-1. What is the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space?
+What is the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space?
 
-avg(memory_utilization{org="openregister", space="prod"}) by (app)
+<details>
+  <summary>ANSWER</summary><p>
+
+  ```avg(memory_utilization{org="openregister", space="prod"}) by (app)```
 
 or even better
 
-avg(memory_utilization{org="openregister", space="prod"}) without (exported_instance)
+  ```avg(memory_utilization{org="openregister", space="prod"}) without (exported_instance)```
+
+</p>
+</details>
+
+
 
 
