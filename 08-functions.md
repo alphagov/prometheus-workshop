@@ -10,7 +10,7 @@ rate(http_requests_total{job="api-server"}[5m])
 
 #### Exercise
 
-In the previous exercise you worked out the the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space. Now return that list sorted by value.
+1. In the previous exercise you worked out the the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space. Now return that list sorted by value.
 
 sort(avg(memory_utilization{org="openregister", space="prod"}) by (app))
 
@@ -18,10 +18,10 @@ or even better
 
 sort(avg(memory_utilization{org="openregister", space="prod"}) without (exported_instance))
 
-What is per minute rate of 2xx requests to the `grafana-paas` app based on the last 5 minutes of data?
+2. What is per minute rate of 2xx requests to the `grafana-paas` app based on the last 5 minutes of data?
 
 rate(requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}[5m]) * 60
 
-Return the value of how many conduit apps are running in the PaaS (indicated by their app name including `conduit`)
+3. Return the value of how many conduit apps are running in the PaaS (indicated by their app name including `conduit`)
 
-```count(cpu{app=~".*conduit.*"})```
+```count(cpu{app=~".*conduit.*"})``` or similar

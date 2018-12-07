@@ -17,11 +17,11 @@ For example to find the total number of PaaS disk space currently in use for all
 
 #### Exercise
 
-Find what the maximum value for the `cpu` metric is.
+1. Find what the maximum value for the `cpu` metric is.
 
-Find the top 3 values for the `memory_utilization` metric is.
+2. Find the top 3 values for the `memory_utilization` metric is.
 
-What is the total number of 2xx requests has the `notify-api` app in the `production` space processed in the last minute?
+3. What is the total number of 2xx requests has the `notify-api` app in the `production` space processed in the last minute?
 
 `sum(increase(requests{app="notify-api", status_range="2xx", space="production"}[1m]))`.
 

@@ -10,7 +10,7 @@ You can sum on any label and even multiple labels.
 
 #### Exercise
 
-What is the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space?
+1. What is the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space?
 
 avg(memory_utilization{org="openregister", space="prod"}) by (app)
 

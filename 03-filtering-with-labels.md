@@ -12,10 +12,10 @@ You can also use `!=`.
 
 #### Exercise
 
-Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
+1. Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
 
 `cpu{app="notify-api", space="production", exported_instance="0"}`
 
-Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
+2. Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
 
-! `memory_utilization{app=~"registers.*", space!="sandbox"}`
+`memory_utilization{app=~"registers.*", space!="sandbox"}`

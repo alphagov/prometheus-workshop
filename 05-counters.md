@@ -10,10 +10,10 @@ Often you want to know how many 2xx requests you've had in the last minute or ho
 
 #### Exercise
 
-Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Increase the time period of your graph to spot the counter resets.
+1. Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Increase the time period of your graph to spot the counter resets.
 
-Graph the per minute increase for 2xx requests for Grafana:
+2. Graph the per minute increase for 2xx requests for Grafana:
 
 ```increase(requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}[1m])```
 
-Then graph the per hour increase and compare this with the per minute increase.
+3. Graph the per hour increase and compare this with the per minute increase.

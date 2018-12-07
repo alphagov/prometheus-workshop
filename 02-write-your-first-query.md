@@ -4,7 +4,9 @@
 
 #### Exercise
 
-Query `up` in the Prometheus user interface. Swap between the console and the graph tabs. Extend the interval to 24h in the graph tab.
+1. Query `up` in the Prometheus user interface.
+2. Swap between the console and the graph tabs.
+3. Extend the interval to 24h in the graph tab.
 
 #### Docs
 

@@ -9,8 +9,8 @@ It's important to understand the difference between instant and range vectors Pr
 
 Make sure you on the `Console` tab.
 
-Query `up{job="prometheus"}`. This is an instant vector
+1. Query `up{job="prometheus"}`. This is an instant vector
 
-Query `up{job="prometheus"}[2m]`. This is a range vector. Compare the difference. Can you work out how often this target is scraped? What happens if you try and graph this query?
+2. Query `up{job="prometheus"}[2m]`. This is a range vector. Compare the difference. Can you work out how often this target is scraped? What happens if you try and graph this query?
 
-Query `up{job="prometheus"}` for a 2 hour range.
+3. Query `up{job="prometheus"}` for a 2 hour range.
