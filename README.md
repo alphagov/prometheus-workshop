@@ -59,13 +59,16 @@ You can also use `!=`.
 Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space.
 
 <details><summary>ANSWER</summary>
-`cpu{app="notify-api", space="production", exported_instance="0"}`
+<p>
+```cpu{app="notify-api", space="production", exported_instance="0"}```
+</p>
 </details>
+
 
 Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
 
 <details><summary>ANSWER</summary>
-`memory_utilization{app=~"registers.*", space!="sandbox"}`
+```memory_utilization{app=~"registers.*", space!="sandbox"}```
 </details>
 
 
