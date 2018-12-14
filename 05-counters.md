@@ -2,20 +2,28 @@
 
 Counters are a different type of metric (compared to gauges).
 
-A counter is a cumulative metric that represents a single monotonically increasing counter whose value can only increase or be reset to zero on restart. For example, you can use a counter to represent the number of requests served, tasks completed, or errors.
+A counter is a cumulative metric whose value can stay the same, increase or be reset to zero. For example, you can use a counter to represent the number of requests served, tasks completed, or errors.
 
-Often you want to know how many 2xx requests you've had in the last minute or hour. For this you should the `increase` function.
+Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Extend the time period of your graph to spot the counter resets.
 
-```increase(requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}[1m])```
+One example of when a counter reset might happen would be if your application crashed and loses the value of the counter. To mitigate counter resets when querying/graphing you will need to use function such as `increase` or `rate`.
+
+For example, you often you want to know how many 2xx requests you've had over a certain time period. For this you should the `increase` function.
 
 ## Exercise
 
-Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Increase the time period of your graph to spot the counter resets.
+Use the console to give you the increase of 2xx `requests` for Grafana in the last minute using `increase(requests{app="grafana-paas", status_range="2xx"}[1m])`. Now graph this query.
 
 ------
 
-Graph the per minute increase for 2xx requests for Grafana using `increase(requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}[1m])`
+Use the console to give you the increase of 2xx `requests` for Grafana in the last hour and then graph the query. Compare this graph with the per minute graph.
 
-------
+<details>
+  <summary>ANSWER</summary><p>
 
-Graph the per hour increase and compare this with the per minute increase.
+  ```increase(requests{app="grafana-paas", status_range="2xx"}[1h])```
+
+</p>
+</details>
+
+

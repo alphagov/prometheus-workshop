@@ -25,4 +25,3 @@ https://prometheus.io/
 - Integration with Zendesk for tickets and Pagerduty for alerts.
 - Instructions for how to set up and use can be found in the Reliability Engineering docs.
 - It's being used for monitoring and alerting by RE Observe, Registers, data.gov.uk and Notify
-- https://prom-3.monitoring.gds-reliability.engineering/graph

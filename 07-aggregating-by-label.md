@@ -17,13 +17,23 @@ What is the average `memory_utilization` for each of the apps running in the `op
 
   ```avg(memory_utilization{org="openregister", space="prod"}) by (app)```
 
-or even better
+or
 
   ```avg(memory_utilization{org="openregister", space="prod"}) without (exported_instance)```
 
 </p>
 </details>
 
+------
 
+BONUS: Return the value of how many conduit apps are running in the PaaS (indicated by their app name including `conduit`). Hint - use a proxy metric such as `cpu` to indicate an app is running.
+
+<details>
+  <summary>ANSWER</summary><p>
+
+  ```count(cpu{app=~".*conduit.*"})``` or similar
+
+</p>
+</details>
 
 
