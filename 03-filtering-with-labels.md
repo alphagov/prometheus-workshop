@@ -12,6 +12,18 @@ You can also use `!=`.
 
 ## Exercise
 
+Write a query to return the current value for the `memory_utilization` for the PaaS `app` named `gds-way`.
+
+<details>
+  <summary>ANSWER</summary><p>
+
+  ```memory_utilization{app="gds-way"}```
+
+</p>
+</details>
+
+------
+
 Write a query to return the current value for the `cpu` for the first instance of the PaaS app named `notify-api` running in the PaaS `production` space. (hint, use `exported_instance` not `instance`)
 
 <details>
@@ -24,7 +36,7 @@ Write a query to return the current value for the `cpu` for the first instance o
 
 ------
 
-Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
+BONUS: Write a query to return the current `memory_utilization` for all apps that have a name beginning with `registers` and are not running in the `sandbox` PaaS space.
 
 <details>
   <summary>ANSWER</summary><p>

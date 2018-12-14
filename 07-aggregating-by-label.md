@@ -2,7 +2,7 @@
 
 `sum(disk_bytes)` gives you total disk_bytes in use
 
-`sum(disk_bytes) by (org)` gives you the total disk_bytes in use grouped by by team
+`sum(disk_bytes) by (org)` gives you the total disk_bytes in use grouped by PaaS organisation
 
 You can sum on any label and even multiple labels.
 

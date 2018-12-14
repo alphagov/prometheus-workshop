@@ -50,6 +50,8 @@ BONUS: What are the top 3 highest values for the `memory_utilization` metric?
 </p>
 </details>
 
+------
+
 BONUS: What percentage of `requests` in the last 5 minutes to the`notify-api` app in the `production` space returned a 2xx status code?
 
 <details>

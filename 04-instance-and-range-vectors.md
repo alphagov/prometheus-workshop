@@ -15,7 +15,7 @@ Query `up{job="prometheus"}[2m]`. This is a range vector.
 
 Compare the difference. Can you work out how often this target is scraped? What happens if you try and graph this query?
 
-Query `up{job="prometheus"}` for a 2 hour range.
+Write a query to return `up{job="prometheus"}` for a 2 hour range.
 
 <details>
   <summary>ANSWER</summary><p>
