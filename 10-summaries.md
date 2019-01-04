@@ -1,7 +1,6 @@
-# Bonus
+# Summaries
 
 TODO
 
-- Histograms
 - Summaries
 - and/or/unless
