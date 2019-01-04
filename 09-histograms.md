@@ -11,7 +11,7 @@ Histograms are cumulative.
 
 ## Exercises
 
-For the following three exercises, use the histogram of `http_server_request_duration_seconds_bucket` since the last counter resets for the `rotas` job with `controller=""` and status `code="200"`.
+Find the histogram of `http_server_request_duration_seconds_bucket` since the last counter resets for the `rotas` job with `controller=""` and status `code="200"`. Use this histogram for the next three exercises.
 
 How many requests took less than or equal 1s?
 
@@ -41,7 +41,9 @@ How many requests were there in total?
 
 ------
 
-How many requests took between 0.01s and 2.5s? Hint, you will find this stack overflow post useful - https://stackoverflow.com/questions/45005524/prometheus-promql-subtract-two-gauge-metrics
+How many requests took between 0.01s and 2.5s?
+
+Hint, you will find this stack overflow post useful - https://stackoverflow.com/questions/45005524/prometheus-promql-subtract-two-gauge-metrics
 
 <details>
   <summary>ANSWER</summary><p>
