@@ -1,4 +1,4 @@
-# Instance and range vectors
+# Instant and range vectors
 
 * Instant vector - a set of time series containing a single sample for each time series, all sharing the same timestamp
 * Range vector - a set of time series containing a range of data points over time for each time series
