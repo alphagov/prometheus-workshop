@@ -1,6 +1,6 @@
 # Summaries
 
-A summary also samples observations (usually things like request durations or response sizes) however unlike a histogram, it does not put them into buckets but instead calculates quantiles.
+A summary also records observations (usually things like request durations or response sizes) however unlike a histogram, it does not put them into buckets but instead calculates quantiles.
 
 A summary with a base metric name of <basename> exposes multiple time series during a scrape:
 

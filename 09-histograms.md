@@ -1,6 +1,6 @@
 # Histograms
 
-A histogram samples observations (usually things like request durations or response sizes) and counts them in buckets.
+A histogram records observations (usually things like request durations or response sizes) and counts them in buckets.
 
 A histogram with a base metric name of `<basename>` exposes multiple time series during a scrape:
 
