@@ -1,13 +1,16 @@
 # Histograms
 
-A histogram samples observations (usually things like request durations or response sizes) and counts them in buckets.
+A histogram records observations (usually things like request durations or response sizes) and counts them in buckets.
 
 A histogram with a base metric name of `<basename>` exposes multiple time series during a scrape:
 
 - cumulative counters for the observation buckets, exposed as `<basename>_bucket{le="<upper inclusive bound>"}`
 - the count of events that have been observed, exposed as `<basename>_count` (identical to `<basename>_bucket{le="+Inf"}` above)
+- the sum of events that have been observed, exposed as `<basename>_sum`
 
 Histograms are cumulative.
+
+The `_sum` metric is useful in combination with the `_count` metric to calculate averages over all of the recorded observations in a given time range.
 
 ## Exercises
 

@@ -6,7 +6,7 @@ A counter is a cumulative metric whose value can stay the same, increase or be r
 
 Graph the 2xx requests for Grafana using `requests{app="grafana-paas", status_range="2xx", job="observe-paas-prometheus-exporter"}`. Extend the time period of your graph to spot the counter resets.
 
-One example of when a counter reset might happen would be if your application crashed and loses the value of the counter. To mitigate counter resets when querying/graphing you will need to use function such as `increase` or `rate`.
+One example of when a counter reset might happen would be if your application restarted due to a deploy and loses the value of the counter. To mitigate counter resets when querying/graphing you will need to use function such as `increase` or `rate`.
 
 For example, you often you want to know how many 2xx requests you've had over a certain time period. For this you should the `increase` function.
 

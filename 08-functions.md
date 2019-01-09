@@ -14,7 +14,7 @@ Prometheus provides many helpful functions for your queries. See the Prometheus 
 
 ## Exercise
 
-In the previous exercise you worked out the the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space. Now return that instance vector sorted by value.
+In the previous exercise you worked out the the average `memory_utilization` for each of the apps running in the `openregister` org in the `prod` space. Now return that instant vector sorted by value.
 
 <details>
   <summary>ANSWER</summary><p>
