@@ -51,7 +51,7 @@ Hint, you will find this stack overflow post useful - https://stackoverflow.com/
 <details>
   <summary>ANSWER</summary><p>
 
-  ```http_server_request_duration_seconds_bucket{job="rotas", controller="", le="1", code="200"} - ignoring(le) http_server_request_duration_seconds_bucket{job="rotas", controller="", le="0.01", code="200"}```
+  ```http_server_request_duration_seconds_bucket{job="rotas", controller="", le="2.5", code="200"} - ignoring(le) http_server_request_duration_seconds_bucket{job="rotas", controller="", le="0.01", code="200"}```
 
 </p>
 </details>
