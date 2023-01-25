@@ -1,5 +1,10 @@
 # prometheus-workshop
 
+This has been archived as:
+
+- due to the retiring of the GDS Observe platform, most exercises will no longer work and would need new examples written
+- the workshop has not been run in a long time
+
 1.5 hour intro workshop to Prometheus focussed on PromQL for GDS
 
 ## format
